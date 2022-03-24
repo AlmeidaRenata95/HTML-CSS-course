@@ -1,0 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 26px; /*tela terá exatamente 26 pixels de sua tela física*/
+  text-transform: uppercase; /*transforma letras minúsculas em maiúsculas*/
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px; /*o h2 poderá ser maior que o h1, pois o h1 é mais pela semântica do que pela aparência*/
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+
+  line-height: 1.5; /*altura da linha*/
+}
+
+li {
+  /*não estilizamos a ul ou ol, e sim a "li "*/
+  font-size: 20px;
+}
+
+/* footer p { seletores descendentes
+font-size: 18px;
+}
+
+article header p {
+relação entre elemento pai e filho, sendo assim seletores descendentes aninhados que
+font-style: italic;
+color: red;
+}
+*/
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 20px;
+}
