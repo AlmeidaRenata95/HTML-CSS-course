@@ -34,19 +34,18 @@ p {
   line-height: 1.5; /*altura da linha*/
 }
 
-li {
-  /*não estilizamos a ul ou ol, e sim a "li "*/
+/*
+li { não estilizamos a ul ou ol, e sim a "li"
   font-size: 20px;
 }
 
-/* footer p { seletores descendentes
+ footer p { seletores descendentes
 font-size: 18px;
 }
 
-article header p {
-relação entre elemento pai e filho, sendo assim seletores descendentes aninhados que
+article header p {relação entre elemento pai e filho, sendo assim seletores descendentes aninhados que
 font-style: italic;
-color: red;
+
 }
 */
 
@@ -56,5 +55,14 @@ color: red;
 }
 
 #copyright {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
 }
