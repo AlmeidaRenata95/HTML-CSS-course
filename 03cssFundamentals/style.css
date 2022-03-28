@@ -132,7 +132,26 @@ article p:last-child {
 
 /*Styling links*/
 
-a: {
+a:link {
   /*isso é uma pseudo classe, não devemos apenas estilizar somente a ancora "a", usar sempre uma pseudo classe */
   color: rgb(68, 149, 241);
+  text-decoration: none;
+}
+
+a:visited {
+  /*color: #777; normalmente não alteramos a cor, ela sempre será a mesma da pseudo classe inicial*/
+  color: #1098ad;
+}
+
+a:hover {
+  /*o hover é um evento que ao passar o mouse no link ele ficará de outra cor*/
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  /*ao passar o mouse e clicar terá um fundo*/
+  background-color: black;
+  font-style: italic;
 }
