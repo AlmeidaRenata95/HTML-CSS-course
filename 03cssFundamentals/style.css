@@ -123,7 +123,16 @@ li:nth-child(even) {
   /*color: red;*/
 }
 
+/*
 article p:last-child {
-  /*utilizando pseudo classes nos demais elementos do html, observar sempre a estrutura para pegar o elemento correto. Olhar no html qual é o primeiro elemento filho do article.*/
+  utilizando pseudo classes nos demais elementos do html, observar sempre a estrutura para pegar o elemento correto. Olhar no html qual é o primeiro elemento filho do article.
   color: red;
+}
+*/
+
+/*Styling links*/
+
+a: {
+  /*isso é uma pseudo classe, não devemos apenas estilizar somente a ancora "a", usar sempre uma pseudo classe */
+  color: rgb(68, 149, 241);
 }
