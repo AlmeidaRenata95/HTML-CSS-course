@@ -1,11 +1,12 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+* {
+  /*este é um seletor universal, é muito útil quando o não há propriedade que são herdadas, assim como o body ele interfere no estilo da página, e também existem regras de prioridade para que as propriedade sejam executadas.
+  border-top: 10px solid red;*/
+}
+/*Uma grande diferença entre*/
+body {
+  /*esse é um seletor body, nem todas propriedades são herdadas. As que são são relativas a definição de texto.*/
+  color: #444;
   font-family: sans-serif;
-  color: #444444;
 }
 
 h1,
@@ -18,7 +19,6 @@ h1 {
   font-size: 26px; /*tela terá exatamente 26 pixels de sua tela física*/
   text-transform: uppercase; /*transforma letras minúsculas em maiúsculas*/
   font-style: italic;
-  color: #1098ad;
 }
 
 h2 {
@@ -57,7 +57,7 @@ font-style: italic;
 }
 */
 
-#author {
+#author-text {
   font-style: italic;
   font-size: 18px;
 }
@@ -154,4 +154,34 @@ a:active {
   /*ao passar o mouse e clicar terá um fundo*/
   background-color: black;
   font-style: italic;
+}
+
+/*Conflito de seletores - resolução. Especifidade de seletores*/
+#copyright {
+  /*o seletor "id" tem mais poder/prioridade, então ele é o elemento quie irá valer*/
+  color: red;
+}
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+/*
+footer p {
+  color: green !important; o texto passara a ser priorizado mesmo que o nivel de prioridade desse elemento não seja. 
+}
+*/
+
+/* existe outras formas de fazer... a seguir
+nav a:link,
+nav p {
+  font-size: 18px;
+}
+*/
+
+nav {
+  font-size: 18px;
 }
