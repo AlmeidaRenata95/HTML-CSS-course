@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <link href="style.css" rel="stylesheet">
-
   <title>The Basic Language of the Web: HTML</title>
 </head>
 
@@ -18,34 +17,30 @@
     <h5>The Basic language of the web: HTML </h5>
     <h6>The Basic language of the web: HTML </h6>
     -->
-  <header>
+  <header class="main-header">
     <!--cabeçalho da parte superior do site-->
     <h1>The Code Magazine</h1>
-
     <nav>
+      <strong>navegation </strong>
       <!-- o elemento "nav" agrupa uma seção que indica a navegação para outra páginas do site com links. Nem todo link deve estar denteo do elemento "nav", um footer podera ter um nav pois contem elementos de navegacao de outras paginas, aside para navegacao do menu-->
       <a href="blog.html">Blog</a>
       <a href="#">Challenges</a>
       <a href="#">Flexbox</a>
       <a href="#">CSS</a>
     </nav>
-    <p>Teste paragráfo</p>
-
   </header>
-
-
   <article>
     <header>
       <!--o article refere-se a uma parte independente do conteudo da página, pode conter paragrafos, posts de forum e blogs. Semânticamente é uma tag importante. Pode ser um conteúdo no interior de uma tag "main" -->
-      <h2>The Basic language index of the Web: HTML</h2><strong></strong>
+      <h2 class="post-header">The Basic language index of the Web: HTML</h2><strong></strong>
 
       <img src="img/laura-jones.jpg" alt="Headshot of Laura Jones" width="50" height="50">
 
       <p id="author">
-        Posted by <b>Laura Jones</b> on Monday, June 21st 2027
+        Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
       </p>
 
-      <img src="img/post-img.jpg" alt="html code on a screen" width="500" height="200">
+      <img class="post-img" src="img/post-img.jpg" alt="html code on a screen" width="500" height="200">
       <!--src/source  é um atributo fonte do arquivo. Alt um texto alternativo para a imagem, devemos sempre utilizar para questões de busca e acessibilidade-->
     </header>
     <p>
@@ -56,8 +51,6 @@
     <p>
       In this post, let's focus on HTML. We will learn what HTML is all about, and why you too should learn it.
     </p>
-
-
     <h3>What is HTML?</h3>
     <p>
       HTML stands for <strong>HyperText Markup Language</strong>. It's a markup language that web developers use to
@@ -74,13 +67,11 @@
 
     <ol>
       <!--o navegador renderiza as listas da forma ordenada, mesmo se ocorrer a inclusao de mais um item lista. o significado é ter uma estrutura de forma logica-->
-      <li>First </li>
+      <li class="first-li">First </li>
       <li>The opening tag</li>
       <li>The closing tag</li>
-      <li>The actual element</li>bbbb
+      <li>The actual element</li>
     </ol>
-
-
     <p>
       You can learn more at the <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web
         Docs.
@@ -88,14 +79,12 @@
     </p>
     <!-- o link é a acnora que recebe uma tag "a" e um atributo que é a "href", e sempre recebera a url.-->
     <!-- o atributo target é uma forma de fazer o link abrir na mesma guia do navegador.-->
-
     <h3>Why should you learn HTML</h3>
     <p>
       There are countless reasons for learning the fundamental language of the web. Here are 5 of them:
     </p>
-
     <ul>
-      <li>To be able to use the fundamental web dev language</li>
+      <li class="first-li">To be able to use the fundamental web dev language</li>
       <li>To hand-craft beautiful websites instead of relying on tools like Worpress or Wix</li>
       <li>To build web applications</li>
       <li>To impress friends</li>
@@ -104,6 +93,8 @@
     <p>
       Hopefully you learned something new here. See you next time!
     </p>
+  </article>
+  <aside>
     <h4>Related posts</h4>
     <ul class="related">
       <li>
@@ -111,24 +102,23 @@
         <a href="#"> How to Learn Web Developement</a>
         <p class="related-author">By Jonas Schmedtmamn</p>
       </li>
-
       <li>
         <img src="img/related-2.jpg" alt="lightning" width="75" height="75">
         <a href="#"> The Unknown Powers of CSS</a>
         <p class="related-author">By Jim Dillon</p>
       </li>
-
       <li>
         <img src="img/related-3.jpg" alt="code" width="75" height="75">
         <a href="#"> Why JavaScript at awesome</a>
         <p class="related-author">By Matilda</p>
       </li>
     </ul>
-    <footer>
-      <p id="copyright">Copyright &copy; 2027 by The Code Magazine</p>
-      <!--direitos autorais do site-->
-    </footer>
-  </article>
+  </aside>
+  <footer>
+    <p id="copyright">Copyright &copy; 2027 by The Code Magazine</p>
+    <!--direitos autorais do site-->
+  </footer>
+
 </body>
 
 <!--Resumo sobre a semântica de cada elemento html, podemos dizer que cada elemento quer dizer uma coisa, tanto para acessibilidade, como para motores de busca, cada elemento fará uma coisa, poderá ter um significado ou não. Um bom exemplo seria o uso de "div" para tudo, se usarmos div para tudo a estrututa do html nao terá um boa semântica, devemos utilizar nav, article e assim por diante, todos devem ser usados de forma correta. 
