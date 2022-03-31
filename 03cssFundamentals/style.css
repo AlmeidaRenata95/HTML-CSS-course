@@ -13,6 +13,13 @@ body {
   border-top: 10px;
   margin: 0;
 }
+.container {
+  /*container criado no intuito de dar centralizacao para nossa página, entao criamos um container, demos a largura e as margens apenas laterais. Para centralizar é preciso que as margens seja iguais por isso o valor Auto, o navegador calculara automaticamente*/
+  width: 800px;
+  /* margin-left: auto;
+  margin-right: auto;*/
+  margin: 0 auto;
+}
 
 .main-header {
   /*o main header não sera afetado pelo nosso seletor universal, pois a prioridade dele é maior*/
