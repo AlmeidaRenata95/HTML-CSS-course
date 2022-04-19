@@ -66,7 +66,13 @@ body {
 
 .details-list {
   list-style: square;
+  margin-left: 20px;
 }
+
+.details-list li{ /*este é um seletor descendente, podemos combina-lo. O "li" é o first child da "ul"*/
+  margin-bottom: 10px;
+}
+
 strong {
   font-weight: 28px;
 }
@@ -79,16 +85,17 @@ button:first-child{
 }
 
 
-/*button*/
+/*button*/  /*sempre comentar cada parte do elemento que está fazendo*/
 .add-cart {
   width: 100%;
   background-color: #000;
-  border: none;
+ 
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
   cursor: ponter;
-  padding-top: 5px;
+  padding: 5px;
+  border-top: 4px solid black
 }
 
 .add-cart:hover {
