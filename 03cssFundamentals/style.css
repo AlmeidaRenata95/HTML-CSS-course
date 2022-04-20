@@ -223,7 +223,11 @@ nav a:link {
   display: inline-block;
 }
 
-/*Conflito de seletores - resolução. Especifidade de seletores*/
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+/*Conflito de seletores- resolução. Especifidade de seletores*/
 #copyright {
   /*o seletor "id" tem mais poder/prioridade, então ele é o elemento quie irá valer*/
   color: red;
