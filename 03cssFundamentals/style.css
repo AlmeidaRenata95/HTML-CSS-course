@@ -12,7 +12,7 @@ body {
   color: #444;
   font-family: sans-serif;
   border-top: 10px;
-  margin: 0;
+  position: relative; /*definição para o meu button like, que estará sempre posicionado corretamenter no canto inferior do corpo*/
 }
 .container {
   /*container criado no intuito de dar centralizacao para nossa página, entao criamos um container, demos a largura e as margens apenas laterais. Para centralizar é preciso que as margens seja iguais por isso o valor Auto, o navegador calculara automaticamente*/
@@ -34,8 +34,9 @@ body {
   /*height: 80px;*/
 }
 
-post-header {
+.post-header {
   margin-bottom: 40px;
+  /*position: relative; essa definição faz com que meu button like esteja em uma posição relativa ao container post-header*/
 }
 
 nav {
@@ -227,6 +228,22 @@ nav a:link:last-child {
   margin-right: 0;
 }
 
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer; /*permite um maozinha como cursor ao passar pelo botão*/
+
+  position: absolute;
+  /*top: 50px;
+  left: 50px; apenas comentário, dessa definição eixa meu botão no canto superior da tela, mas nao é isso que quero
+  */
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter { /**/
+  c
+}
 /*Conflito de seletores- resolução. Especifidade de seletores*/
 #copyright {
   /*o seletor "id" tem mais poder/prioridade, então ele é o elemento quie irá valer*/
