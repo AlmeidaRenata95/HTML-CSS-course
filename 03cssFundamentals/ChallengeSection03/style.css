@@ -12,17 +12,19 @@ body {
 
 }
 
-/*
+
 .container-content {
   width: 825px;
   margin: auto;
   padding: 100px;
 }
-*/
+
+
 .product { /*container do produto*/
   border: 4px solid black;
   width: 825px;
   margin: 50px auto;
+  
 }
 
 .product-title {
@@ -77,14 +79,10 @@ strong {
   font-weight: 28px;
 }
 
-
-
 button:first-child{
   text-align: center;
   
 }
-
-
 /*button*/  /*sempre comentar cada parte do elemento que está fazendo*/
 .add-cart {
   width: 100%;
@@ -102,6 +100,47 @@ button:first-child{
   color: #000;
   background-color: #fff;
   
+}
+.color{
+  width: 18px;
+  height: 18px;
+  background-color: rgb(11, 62, 230);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.color-black{
+  background-color: #000;
+}
+.color-blue{
+  background-color: rgb(11, 62, 230);
+}
+.color-red{
+  background-color: rgb(233, 19, 19);
+}
+.color-yellow{
+  background-color: rgb(241, 245, 33);
+}
+.color-green{
+  background-color: rgb(6, 146, 18);
+}
+.color-brown{
+  background-color: rgb(49, 32, 32);
+}
+
+h1::before{
+  content: "SALE";
+  background-color:rgb(219, 53, 53);
+  font-size: 14px;
+  color: #ffff;
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+  top: -40px;
+  left: -200px;
+  letter-spacing: 3px;
+  
+
 }
 
 /* corrigi com um código mais limpo
