@@ -25,7 +25,7 @@ body {
 .main-header {
   /*o main header não sera afetado pelo nosso seletor universal, pois a prioridade dele é maior*/
   /*é um elemento com nivel de caixas grande, então colocamos aqui no topo pois antes estava especificado embaixo.  */
-  background-color: #f7f7f7;
+  background-color: #ce3838;
   /*padding: 20px;*/
   /*padding-left: 40px;*/
   /*padding-right: 40px;*/
@@ -137,6 +137,16 @@ article header p {
   list-style: none;
 }
 
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
 body {
   /**/
 }
@@ -241,8 +251,24 @@ button {
   right: 50px;
 }
 
-h1::first-letter { /**/
-  c
+h1::first-letter {
+  /**/
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "top";
+  background-color: #ffe70f;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /*Conflito de seletores- resolução. Especifidade de seletores*/
 #copyright {
@@ -269,3 +295,25 @@ nav p {
   font-size: 18px;
 }
 */
+
+/*FLOATS*/
+/*criamos as classes "author-img e author" para mostrar um exemplo de uso do float para transformar elementos nivel de linha, para nivel em bloco.*/
+.author-img {
+  float: left;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.author {
+  /* padding-left: 80px; */
+
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
