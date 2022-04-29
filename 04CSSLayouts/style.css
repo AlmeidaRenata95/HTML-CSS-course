@@ -1,0 +1,319 @@
+* {
+  /*este é um seletor universal, é muito útil quando o não há propriedade que são herdadas, assim como o body ele interfere no estilo da página, e também existem regras de prioridade para que as propriedade sejam executadas.
+  border-top: 10px solid red;*/
+  margin: 0; /*é comum que especificar que a margin e padding são zeradas para que não haja conflito de propriedades quando formos estilizar nossas página*/
+  padding: 0;
+}
+/*Uma grande diferença entre*/
+
+/*PAGE SECTIONS*/
+body {
+  /*esse é um seletor body, nem todas propriedades são herdadas. As que são são relativas a definição de texto.*/
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px;
+  position: relative; /*definição para o meu button like, que estará sempre posicionado corretamenter no canto inferior do corpo*/
+}
+.container {
+  /*container criado no intuito de dar centralizacao para nossa página, entao criamos um container, demos a largura e as margens apenas laterais. Para centralizar é preciso que as margens seja iguais por isso o valor Auto, o navegador calculara automaticamente*/
+  width: 800px;
+  /* margin-left: auto;
+  margin-right: auto;*/
+  margin: 0 auto;
+}
+
+.main-header {
+  /*o main header não sera afetado pelo nosso seletor universal, pois a prioridade dele é maior*/
+  /*é um elemento com nivel de caixas grande, então colocamos aqui no topo pois antes estava especificado embaixo.  */
+  background-color: #ce3838;
+  /*padding: 20px;*/
+  /*padding-left: 40px;*/
+  /*padding-right: 40px;*/
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /*height: 80px;*/
+}
+
+.post-header {
+  margin-bottom: 40px;
+  /*position: relative; essa definição faz com que meu button like esteja em uma posição relativa ao container post-header*/
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+aside {
+  /*Aside será uma barra lateral, é um elemento de nivel de caixa grande e com varios elementos filho, é importante estar no topo do css*/
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  border-left: 5px solid #1098ad;
+  border-right: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+/*smaller elements*/
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px; /*tela terá exatamente 26 pixels de sua tela física*/
+  text-transform: uppercase; /*transforma letras minúsculas em maiúsculas*/
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px; /*o h2 poderá ser maior que o h1, pois o h1 é mais pela semântica do que pela aparência*/
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5; /*altura da linha*/
+  margin-bottom: 15px; /*ao especificar valores para o p meus bullets das listas somem, especificar margin para ol e ul*/
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+li {
+  /*não estilizamos a ul ou ol, e sim a "li"*/
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin: 0; /*nao é precisamos especificar nenhum valor, apenas 0*/
+}
+
+footer p {
+  /*seletores descendentes*/
+  font-size: 18px;
+}
+
+article header p {
+  /*relação entre elemento pai e filho, sendo assim seletores descendentes aninhados que*/
+  font-style: italic;
+}
+
+#author-text {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+body {
+  /**/
+}
+
+/*
+.first-li {
+  font-weight: bold;
+}
+*/
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/*
+li:nth-child(3) {
+  para atingir demais elementos filho da lista. terceiro item da lista
+  color: red;
+}
+*/
+/*
+li:nth-child(odd) {
+  keywords: uso do odd aplioara apenas em elemento ímpar
+  color: red;
+}
+*/
+
+li:nth-child(even) {
+  /*keywords: uso do even aplicará apenas nos elementos pares*/
+  /*color: red;*/
+}
+
+/*
+article p:last-child {
+  utilizando pseudo classes nos demais elementos do html, observar sempre a estrutura para pegar o elemento correto. Olhar no html qual é o primeiro elemento filho do article.
+  color: red;
+}
+*/
+
+/*Styling links*/
+
+a:link {
+  /*isso é uma pseudo classe, não devemos apenas estilizar somente a ancora "a", usar sempre uma pseudo classe */
+  color: rgb(68, 149, 241);
+  text-decoration: none;
+}
+
+a:visited {
+  /*color: #777; normalmente não alteramos a cor, ela sempre será a mesma da pseudo classe inicial*/
+  color: #1098ad;
+}
+
+a:hover {
+  /*o hover é um evento que ao passar o mouse no link ele ficará de outra cor*/
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  /*ao passar o mouse e clicar terá um fundo*/
+  background-color: black;
+  font-style: italic;
+}
+
+/*LVHA*/
+.post-img {
+  width: 100%; /*o tamanho da imagem herdará o tamanho do container pai, que no caso é o header que esta pegando todo o comprimento da pagina. alterando para 100% a imagem terá o mesmo comprimento da página */
+  height: auto;
+}
+
+nav a:link {
+  /*background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block;
+  */
+  margin-right: 30px;
+  /*margin-top: 10px; não funcionará até utilizar o display*/
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer; /*permite um maozinha como cursor ao passar pelo botão*/
+
+  position: absolute;
+  /*top: 50px;
+  left: 50px; apenas comentário, dessa definição eixa meu botão no canto superior da tela, mas nao é isso que quero
+  */
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  /**/
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "top";
+  background-color: #ffe70f;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*Conflito de seletores- resolução. Especifidade de seletores*/
+#copyright {
+  /*o seletor "id" tem mais poder/prioridade, então ele é o elemento quie irá valer*/
+  color: red;
+}
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+/*
+footer p {
+  color: green !important; o texto passara a ser priorizado mesmo que o nivel de prioridade desse elemento não seja. 
+}
+*/
+
+/* existe outras formas de fazer... a seguir
+nav a:link,
+nav p {
+  font-size: 18px;
+}
+*/
+
+/*FLOATS*/
+/*criamos as classes "author-img e author" para mostrar um exemplo de uso do float para transformar elementos nivel de linha, para nivel em bloco.*/
+.author-img {
+  float: left;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.author {
+  /* padding-left: 80px; */
+
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
