@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  border: none;
+  font-weight: 18px;
+}
+
+.container-content {
+  width: 825px;
+  margin: auto;
+  padding: 100px;
+}
+
+.product {
+  /*container do produto*/
+  border: 4px solid black;
+  width: 825px;
+  margin: 50px auto;
+}
+
+.product-title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  background-color: #f7f7f7f7;
+  padding: 20px; /*inseri um espaço de volta no título*/
+}
+
+/*Production Information*/
+.price {
+  font-size: 20px;
+}
+
+.shipping {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.more-info:link,
+.more-info:visited {
+  color: black;
+}
+
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+}
+
+/*Product details*/
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.details-list {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.details-list li {
+  /*este é um seletor descendente, podemos combina-lo. O "li" é o first child da "ul"*/
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: 28px;
+}
+
+button:first-child {
+  text-align: center;
+}
+/*button*/ /*sempre comentar cada parte do elemento que está fazendo*/
+.add-cart {
+  width: 100%;
+  background-color: #000;
+
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: ponter;
+  padding: 5px;
+  border-top: 4px solid black;
+}
+
+.add-cart:hover {
+  color: #000;
+  background-color: #fff;
+}
+.color {
+  width: 18px;
+  height: 18px;
+  background-color: rgb(11, 62, 230);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.color-black {
+  background-color: #000;
+}
+.color-blue {
+  background-color: rgb(11, 62, 230);
+}
+.color-red {
+  background-color: rgb(233, 19, 19);
+}
+.color-yellow {
+  background-color: rgb(241, 245, 33);
+}
+.color-green {
+  background-color: rgb(6, 146, 18);
+}
+.color-brown {
+  background-color: rgb(49, 32, 32);
+}
+
+h1::before {
+  content: "SALE";
+  background-color: rgb(219, 53, 53);
+  font-size: 14px;
+  color: #ffff;
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+  top: -40px;
+  left: -200px;
+  letter-spacing: 3px;
+}
+
+/* corrigi com um código mais limpo
+span {
+  color: rgba(82, 73, 73, 0.8) (117, 109, 109);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 18px;
+}
+
+article a {
+  color: black;
+}
+
+button {
+  background-color: white;
+}
+*/
